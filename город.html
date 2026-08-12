@@ -72,10 +72,10 @@
   }
   @keyframes holoText{0%,100%{opacity:1}50%{opacity:.7}}
 
-  /* ---- ФЛЕКС-БОКС «УСЛУГИ МУЖИКА» ---- */
+  /* ---- ФЛЕКС-БОКС УСЛУГ ---- */
   .services{
     position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.85);
-    width:min(370px,90vw);max-height:72vh;
+    width:min(360px,90vw);max-height:72vh;
     background:var(--panel);border:1px solid rgba(255,122,217,.45);
     clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
     padding:14px 16px;display:flex;flex-direction:column;gap:8px;
@@ -194,7 +194,7 @@
 <div class="hud brand">
   <div class="eyebrow">НОЧНОЙ РЕЙД · 86 РЕГИОН</div>
   <h1>ГОРОД ГРЕХОВ ⌁ НИЖНЕВАРТОВСК</h1>
-  <div class="sub">Скролл — погружение. «ФОТО НА ФОН» — фото на билборд. Шарики сверху — желания. Квадрат ♥ внизу билборда над «НИЖНЕВАРТОВСК» — услуги мужика.</div>
+  <div class="sub">Скролл — погружение. «ФОТО НА ФОН» — фото на билборд. Шарики над вывеской — желания. Квадрат с сердцем под «НИЖНЕВАРТОВСК» — услуги мужа на час.</div>
 </div>
 
 <div class="hud ctrl">
@@ -204,31 +204,28 @@
 </div>
 <input type="file" id="imgPick" accept="image/*" style="display:none">
 
-<!-- ФЛЕКС-БОКС «УСЛУГИ МУЖИКА» -->
+<!-- ФЛЕКС-БОКС УСЛУГ -->
 <div class="services" id="svcPanel">
   <div class="shead">
     <div>
-      <div class="stitle">🔧 УСЛУГИ МУЖИКА · ПРАЙС В ГРЕХАХ</div>
-      <div class="ssub">РАБОТАЮ РУКАМИ И ГОЛОВОЙ · ОПЛАТА ПОЦЕЛУЯМИ · ГАРАНТИЯ</div>
+      <div class="stitle">💪 МУЖ НА ЧАС · ЛЮБОВЬ-УСЛУГИ</div>
+      <div class="ssub">ЦЕНЫ В ГРЕХАХ · ОПЛАТА ПОЦЕЛУЯМИ · БЕЗ ПРЕДОПЛАТЫ</div>
     </div>
     <button class="btn sclose" id="btnSvcClose">✕</button>
   </div>
   <div class="slist">
     <div class="srow"><span>МУЖ НА ЧАС — ПРИБИТЬ / ПОВЕСИТЬ / ПОЧИНИТЬ</span><span class="price">1 ГРЕХ</span></div>
-    <div class="srow"><span>ЗАБИТЬ ГВОЗДЬ С ПЕРВОГО УДАРА</span><span class="price">1 ГРЕХ</span></div>
-    <div class="srow"><span>СОБРАТЬ ШКАФ (БЕЗ ЛИШНИХ ДЕТАЛЕЙ)</span><span class="price">3 ГРЕХА</span></div>
+    <div class="srow"><span>ПОЛКА + КАРНИЗ ПОД КЛЮЧ</span><span class="price">2 ГРЕХА</span></div>
     <div class="srow"><span>ПОЧИНИТЬ КРАН И НЕРВЫ</span><span class="price">2 ГРЕХА</span></div>
-    <div class="srow"><span>ОТКРЫТЬ БАНКУ С ОГУРЦАМИ</span><span class="price">1 ГРЕХ</span></div>
-    <div class="srow"><span>ДОНЕСТИ ВСЕ ПАКЕТЫ ЗА ОДИН РАЗ</span><span class="price">2 ГРЕХА</span></div>
-    <div class="srow"><span>РАЗОБРАТЬСЯ С ПРОВОДАМИ ЗА ТЕЛЕВИЗОРОМ</span><span class="price">2 ГРЕХА</span></div>
-    <div class="srow"><span>ВЫНЕСТИ МУСОР БЕЗ НАПОМИНАНИЙ</span><span class="price">1 ГРЕХ</span></div>
-    <div class="srow"><span>ЛОПАТА-СЕРВИС: СНЕГ / ОГОРОД / ЯМА</span><span class="price">3 ГРЕХА</span></div>
-    <div class="srow"><span>ПОСТОЯТЬ В ОЧЕРЕДИ ВМЕСТО ТЕБЯ</span><span class="price">2 ГРЕХА</span></div>
-    <div class="srow"><span>РЫБАЛКА-КОМПАНЬОН (ТИШИНА ГАРАНТИРОВАНА)</span><span class="price">4 ГРЕХА</span></div>
-    <div class="srow"><span>МОЛЧА КИВАТЬ В СПОРЕ · ПРЕМИУМ</span><span class="price">5 ГРЕХОВ</span></div>
-    <div class="srow"><span>ОБНИМАШКИ И ПЛЕД ПОСЛЕ ТРУДОВОГО ДНЯ</span><span class="price">∞ БЕСПЛАТНО</span></div>
+    <div class="srow"><span>ВЫНОС МУСОРА (И МОЗГА)</span><span class="price">1 ГРЕХ</span></div>
+    <div class="srow"><span>ЗАБИТЬ ГВОЗДЬ В ВОПРОС</span><span class="price">1 ГРЕХ</span></div>
+    <div class="srow"><span>ОБНИМАШКИ ПРЕМИУМ</span><span class="price">3 ГРЕХА</span></div>
+    <div class="srow"><span>МАССАЖ ПЛЕЧ ПОСЛЕ СМЕНЫ</span><span class="price">3 ГРЕХА</span></div>
+    <div class="srow"><span>СЕРЕНАДА ПОД ОКНОМ (БАЛАЛАЙКА ОПЦИОНАЛЬНО)</span><span class="price">4 ГРЕХА</span></div>
+    <div class="srow"><span>ЛЮБОВЬ ДО ЗАРПЛАТЫ</span><span class="price">5 ГРЕХОВ</span></div>
+    <div class="srow"><span>ЛЮБОВЬ НАВСЕГДА · АКЦИЯ</span><span class="price">∞ БЕСПЛАТНО</span></div>
   </div>
-  <div class="sfoot">ВЫЕЗД ПО ГОРОДУ НА ПИЦЦЕ · ЧЕК В ГРЕХАХ · СКИДКА ПОСТОЯННЫМ ГРЕШНИЦАМ</div>
+  <div class="sfoot">ВЫЕЗД ПО ГОРОДУ НА ПИЦЦЕ · ГАРАНТИЯ · ЧЕК В ГРЕХАХ</div>
 </div>
 
 <div class="hud gauge-wrap">
@@ -290,7 +287,7 @@ var SRGB = THREE.sRGBEncoding;
 
 var LAYERS = [
   { num:'01', name:'НЕОНОВЫЙ ГОРОД', thr:0, color:'#c86bff',
-    desc:'Крыши Нижневартовска в неоне: калейдоскоп на горизонте, шарики-желания над вывеской, а квадрат ♥ внизу билборда над «НИЖНЕВАРТОВСК» открывает услуги мужика.' },
+    desc:'Крыши Нижневартовска в неоне: калейдоскоп на горизонте, шарики-желания над вывеской и квадрат «услуги мужа на час» под «НИЖНЕВАРТОВСК».' },
   { num:'02', name:'УЛИЦЫ ГРЕХОВ', thr:125, color:'#ffd76a',
     desc:'Смог рассеивается: световые треки машин, неон витрин, на каждом углу горит «ГРЕХИ».' },
   { num:'03', name:'ПОДЗЕМЕЛЬЯ', thr:260, color:'#ff2e4d',
@@ -500,19 +497,19 @@ var wishActs={
     setTimeout(function(){salute(0x3ee6ff,PB_GRAD,false,d.mesh.position);},500); }
 };
 
-/* ---------- МАЛЕНЬКИЙ КВАДРАТ ♥ ВНИЗУ БИЛБОРДА, НАД «НИЖНЕВАРТОВСК» ---------- */
+/* ---------- КВАДРАТНАЯ КНОПКА «УСЛУГИ» ПОД «НИЖНЕВАРТОВСК» ---------- */
 var svcTex = canvasTex(128,128,function(g){
   g.clearRect(0,0,128,128);
   g.strokeStyle='#ff7ad9'; g.lineWidth=6; g.shadowColor='#ff7ad9'; g.shadowBlur=14;
-  g.strokeRect(12,12,104,104);
-  g.fillStyle='#ff7ad9'; g.font='700 58px sans-serif'; g.textAlign='center'; g.textBaseline='middle';
+  g.strokeRect(10,10,108,108);
+  g.fillStyle='#ff7ad9'; g.font='700 62px sans-serif'; g.textAlign='center'; g.textBaseline='middle';
   g.fillText('♥',64,60);
-  g.fillStyle='#ffffff'; g.font='700 28px sans-serif';
-  g.fillText('+',100,32);
+  g.fillStyle='#ffffff'; g.font='700 30px sans-serif';
+  g.fillText('+',102,30);
 });
-var svcBtn = new THREE.Mesh(new THREE.PlaneGeometry(.75,.75),
+var svcBtn = new THREE.Mesh(new THREE.PlaneGeometry(.95,.95),
   new THREE.MeshBasicMaterial({map:svcTex,transparent:true,depthWrite:false,fog:false,side:THREE.DoubleSide}));
-svcBtn.position.set(0,3.4,-7.7);
+svcBtn.position.set(0,10.15,-7.8);
 scene.add(svcBtn);
 
 var svcPanel=document.getElementById('svcPanel');
@@ -961,7 +958,7 @@ function animate(){
   holoMat.uniforms.uTime.value = elapsed;
   holoMat.uniforms.uOp.value = .6 + Math.sin(elapsed*.8)*.08;
 
-  /* шарики-желания */
+  /* шарики-желания: пульс и вспышки */
   for(var wi=0;wi<wishDots.length;wi++){
     var d=wishDots[wi];
     var ph=d.mesh.userData.phase;
@@ -974,11 +971,11 @@ function animate(){
     if(d.t>0){ d.t-=dt; if(d.t<=0) d.tag.visible=false; }
   }
 
-  /* квадрат ♥ внизу билборда */
+  /* квадрат «услуги»: пульс + мигание, чтобы замечали */
   var sp2=1+Math.sin(elapsed*3.2)*.14;
   svcBtn.scale.setScalar(sp2);
   svcBtn.material.opacity=.85+(Math.sin(elapsed*6)>.9?.15:0);
-  svcBtn.position.y=3.4+Math.sin(elapsed*2.2)*.06;
+  svcBtn.position.y=10.15+Math.sin(elapsed*2.2)*.06;
 
   applyCouple(dt);
 
